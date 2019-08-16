@@ -1,0 +1,10 @@
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType text/x-component .htc
+SetEnvIfNoCase Request_URI \.(ogv|mp4|webm)$ no-gzip dont-vary
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L]

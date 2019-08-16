@@ -1,0 +1,94 @@
+html,body{height:100%;}
+body,body p,ul li,a,input,select option,body div{font-family:'Roboto',sans-serif;margin:0;padding:0;}
+div,body{box-sizing:border-box}
+img{max-width:100%;height:auto;}
+body p{font-size:16px;}
+.not-active{/* pointer-events:none; *//* cursor:default; *//* text-decoration:none; *//* color:black; */}
+.hidden{height: 0;overflow: hidden;}
+.hidden-input{display:none;}
+.center-text{text-align:center;}
+::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
+color:#5d7ab1;}
+::-moz-placeholder{ /* Firefox 19+ */
+color:#5d7ab1;}
+:-ms-input-placeholder{ /* IE 10+ */
+color:#5d7ab1;}
+:-moz-placeholder{ /* Firefox 18- */
+color:#5d7ab1;}
+::-webkit-inner-spin-button{display:none;-webkit-appearance:none;}
+@-webkit-keyframes autofill{
+	to{color:#666;background:transparent;}
+}
+input:-webkit-autofill{-webkit-animation-name:autofill;-webkit-animation-fill-mode:both;-webkit-text-fill-color:#fff!important;}
+
+/* input[type="date"]::-webkit-calendar-picker-indicator { background: transparent; bottom: 0; color: transparent; cursor: pointer; height: auto; left: 0; position: absolute; right: 0; top: 0; width: auto; } */
+body,body.white-color,body a{color:#fff;text-decoration:none}
+body h3{font-size:23px;}
+body h2{font-size:30px;}
+body h4{font-size:18px;margin:20px 0}
+.moomo-style-form{background:url('../images/tiq/bg_sign_in-min.jpg') left top no-repeat;background-size:cover;min-height:100%;}
+.moomo-style-form .wrap-content{width:100%;max-width:446px;margin:0 auto;z-index:2;position:relative;padding-top:7%;}
+.moomo-style-form .full-width:after{content:"";background:rgba(2,36,97,.85);position:fixed;left:0;top:0;z-index:1;width:100%;height:100%;}
+.moomo-style-form .content-form form .submit,.btn{color:#fff;border:1px solid #fff;font-size:18px;border-radius:5px;cursor:pointer;text-align:center;width:100%;background:transparent;padding:15px 0;}
+.moomo-style-form .content-form form .submit:hover,.btn:hover{background:rgba(2,36,97,1);}
+.moomo-style-form .logo{margin-bottom:60px;}
+.moomo-style-form .content-form form label{display:block;margin:10px 0 0;color:#fff;}
+.moomo-style-form .content-form form input{border:none;width:100%;background:none;padding:15px 0;border-bottom:1px solid #fff;outline:none;color:#fff;}
+.moomo-style-form .content-form form select{border:none;width:100%;background:transparent;padding:15px 0 4px 0;border-bottom:1px solid #fff;outline:none;color:#fff;}
+form.fofgot-password input#pass,form.fofgot-password input#oldpass{color:#fff!important}
+.moomo-style-form .content-form form option{background:#274478;}
+.moomo-style-form .content-form input[type=number]::-webkit-inner-spin-button,.moomo-style-form .content-form input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
+p.forgot_pass{display:flex;align-items:center;font-size:14px;}
+.moomo-style-form .content-form form p{margin-bottom:30px;}
+.moomo-style-form .content-form form p.forgot_pass span,.moomo-style-form .content-form form p.forgot_pass a{display:block;width:50%;}
+.moomo-style-form .content-form form  a{text-decoration:none;color:#fff;}
+.moomo-style-form .content-form form p.forgot_pass span label{margin:0;display:table;float:right;cursor:pointer;}
+.moomo-style-form .content-form form p.forgot_pass span label input{width:13px;float:left;margin-right:7px;margin-top:4px;}
+.moomo-style-form .content-form form p.forgot_pass span label input:checked+text{color:#f19b01;display:inline-block}
+input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+.moomo-style-form .user-detail  .wrap-content{max-width:700px;}
+.moomo-style-form .user-detail  .wrap-content .step-3 .fields{display:flex;flex-wrap:wrap;margin-top:30px}
+.moomo-style-form .user-detail  .wrap-content .step-3 .fields p{flex:48%;}
+.moomo-style-form .user-detail  .wrap-content .step-3 .fields p:nth-child(2n){margin-left:2%;}
+.moomo-style-form .user-detail  .content-form form input#birthday{padding-bottom:7px;position:relative;}
+.moomo-style-form .user-detail  .wrap-content .step-3 span,span.desc,.moomo-style-form .content-form form span.desc a{color:#8fb6fc;line-height:25px;}
+.content-form form span.desc a{font-weight:bold}
+.moomo-style-form .user-detail  .wrap-content .step-3 text{font-size:12px;color:#8fb6fc;padding-left:27px;display:block;line-height:18px;}
+.moomo-style-form .user-detail  .wrap-content .step-3 input#pdpa{position:absolute;left:0;width:auto;}
+.moomo-style-form .user-detail  .wrap-content .step-3 .fields p.pdpa{flex:100%;}
+.moomo-style-form .user-detail  .wrap-content .step-3 .fields  p.sign-up-row{max-width:446px;margin:0 auto 50px}
+.moomo-style-form .content-form form span.radio-group label{width:50%;float:left;cursor:pointer;color:#8fb6fc;}
+.moomo-style-form .content-form form span.radio-group label input{display:block;width:14px;float:left;text-align:left;margin:2px 14px 5px 0px;}
+.moomo-style-form .content-form form span.radio-group{display:block;margin-bottom:13px;float:left;width:100%;}
+select.country-code{width:25%!important;background:transparent;color:#fff;border-width:0 0 1px 0;border-color:#fff;padding:14px 0;float:left;outline:none;min-width:140px;}
+.moomo-style-form .content-form form p.mobile-number-row select.country-code option{background:#274478;}
+.moomo-style-form .content-form form p.mobile-number-row{display:flex;width:100%;margin-bottom:0;}
+form.sign-up input#next-step-2{margin-top:50px;}
+.fields .error{border-bottom:1px solid red!important;}
+.show_error{color:red!important;}
+.moomo-style-form .content-form form p.mobile-number-row input{width:100%;float:left;padding-left:20px;box-sizing:border-box;}
+.moomo-style-form .content-form p.birthday{display:flex;}
+.moomo-style-form .content-form form.sign-up p.birthday .age{width:100px;}
+.moomo-style-form .content-form form label.margin-bottom{margin:20px 0;}
+.moomo-style-form .content-form form.sign-up p.birthday .date{width:100%;}
+.moomo-style-form .wrap-content .step-3 .fields{    /* display: flex; */
+flex-wrap:wrap;margin-top:30px;}
+.timer,.timer-done,.timer-loop{font-size:14px;color:#8fb6fc;padding:5px;font-family:'Roboto'}
+.jst-hours{float:left!important;display:none;}
+.jst-minutes{float:left;}
+.jst-seconds{float:left;}
+.jst-clearDiv{clear:both;}
+.jst-timeout{color:red;}
+#alert_box{display:none;margin-top:20px;}
+.otp_time p{float:left;text-align:left;margin-bottom:0px!important;}
+.otp_time .resend_otp{width:25%;color:#f19b01;margin-top:4px;cursor:pointer;}
+.otp_time .timer{width:75%;}
+.otp_time{width:100%;height:60px;margin-top:20px;}
+.moomo-style-form .content-form form .step-2 p{margin-bottom:0px!important;}
+
+/** personal info - personal_info_change_password**/
+#personal_info_edit .moomo-style-form,#personal_info_change_password .moomo-style-form{background:none;}
+#personal_info_edit .moomo-style-form .full-width:after,#personal_info_change_password .moomo-style-form .full-width:after{display:none;}
+#personal_info_edit .moomo-style-form .user-detail .wrap-content,#personal_info_change_password .moomo-style-form .user-detail .wrap-content{padding-top:20px}
+.user-detail ul.display-suggestion{margin-top:20px;}
+.password-field{width:50%;}

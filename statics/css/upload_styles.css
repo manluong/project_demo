@@ -1,0 +1,20 @@
+#uploadForm{
+	text-align: center;
+	width: 100%;
+}
+.btnSubmit {
+	background-color: #696969;
+    padding: 5px 30px;
+    border: #696969 1px solid;
+    border-radius: 4px;
+    color: #FFFFFF;
+    margin-top: 10px;
+   
+}
+.inputFile {
+	padding: 5px;
+	border:#F0E8E0 1px solid;
+	border-radius: 4px;
+	width: 200px;
+	
+}

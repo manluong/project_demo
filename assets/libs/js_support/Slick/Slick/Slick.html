@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Hướng dẫn tạo Slider với Slick
+    </title>
+    <link href="Content/slick.css" rel="stylesheet" />
+    <link href="Content/slick-theme.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #3498db;
+        }
+        .slider {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .slick-dots li button:before {
+            font-size: 20px;
+        }
+        .slider h1 {
+            background: #fff;
+            color: #3498db;
+            font-size: 36px;
+            line-height: 100px;
+            margin: 10px;
+            padding: 2%;
+            position: relative;
+            text-align: center;
+            height: 100%;
+        }
+        .slider img {
+            background: #fff;
+            color: #3498db;
+            font-size: 36px;
+            line-height: 100px;
+            margin: auto;
+            padding: 2%;
+            position: relative;
+            text-align: center;
+            height: 100%;
+        }
+
+        .buttons {
+            padding: 0 20px 20px;
+            margin: 40px auto;
+            width: 600px;
+        }
+        .button {
+            background: #3498db;
+            color: #fff;
+            display: block;
+            font-size: 16px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            width: 41%;
+        }
+        .buttons .button {
+            background: #FFF;
+            color: #3498db;
+            float: left;
+            margin: 5px;
+        }
+    </style>
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="Scripts/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //------------------------------
+            $(".single-item").slick({
+                dots: true
+            });
+            //------------------------------
+            $('.multiple-items').slick({
+                dots:true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            //------------------------------
+            $('.responsive').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                  {
+                      breakpoint: 1024,
+                      settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3,
+                          infinite: true,
+                          dots: true
+                      }
+                  },
+                  {
+                      breakpoint: 600,
+                      settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2
+                      }
+                  },
+                  {
+                      breakpoint: 480,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                      }
+                  }
+                ]
+            });
+            //------------------------------------------------
+            $('.variable-width').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+            //----------------------------------------------
+            $('.adaptive-height').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+            //---------------------------------------
+            $('.center').slick({
+                dots:true,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                  {
+                      breakpoint: 768,
+                      settings: {
+                          arrows: false,
+                          centerMode: true,
+                          centerPadding: '40px',
+                          slidesToShow: 3
+                      }
+                  },
+                  {
+                      breakpoint: 480,
+                      settings: {
+                          arrows: false,
+                          centerMode: true,
+                          centerPadding: '40px',
+                          slidesToShow: 1
+                      }
+                  }
+                ]
+            });
+            //-------------------------------------------
+            $('.lazy').slick({
+                dots: true,
+                lazyLoad: 'ondemand',
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+            //--------------------------------------------
+            $('.autoplay').slick({
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+            //-----------------------------------------
+            $('.fade').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+            //----------------------------------------------
+            var slideIndex = $('.add-remove >div').length;
+            $('.add-remove').slick({
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            $('.js-add-slide').on('click', function () {
+                slideIndex++;
+                $('.add-remove').slick('slickAdd', '<div><h1>' + slideIndex + '</h1></div>');
+            });
+
+            $('.js-remove-slide').on('click', function () {
+                $('.add-remove').slick('slickRemove', slideIndex - 1);
+                if (slideIndex !== 0) {
+                    slideIndex--;
+                }
+            });
+        });
+    </script>
+</head>
+    <body>
+        <h1 class="title">Single Item</h1>
+        <div class="slider single-item" role="toolbar">
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+            <div><h1>5</h1></div>
+            <div><h1>6</h1></div>
+            <div><h1>7</h1></div>
+            <div><h1>8</h1></div>
+            <div><h1>9</h1></div>
+            <div><h1>10</h1></div>
+        </div>
+        <h1 class="title">Multiple Items</h1>
+        <div class="slider multiple-items" role="toolbar">
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+            <div><h1>5</h1></div>
+            <div><h1>6</h1></div>
+            <div><h1>7</h1></div>
+            <div><h1>8</h1></div>
+            <div><h1>9</h1></div>
+            <div><h1>10</h1></div>
+        </div>
+        <h1 class="title">Responsive Display</h1>
+        <div class="slider responsive" role="toolbar">
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+            <div><h1>5</h1></div>
+            <div><h1>6</h1></div>
+            <div><h1>7</h1></div>
+            <div><h1>8</h1></div>
+            <div><h1>9</h1></div>
+            <div><h1>10</h1></div>
+        </div>
+        <h1 class="title">Variable Width</h1>
+        <div class="slider variable-width" role="toolbar">
+            <div style="width: 100px;height: 126px"><h1>100</h1></div>
+            <div style="width: 150px; height: 126px"><h1>150</h1></div>
+            <div style="width: 170px; height: 126px"><h1>170</h1></div>
+            <div style="width: 50px; height: 126px"><h1>50</h1></div>
+            <div style="width: 250px; height: 126px"><h1>250</h1></div>
+            <div style="width: 180px; height: 126px"><h1>180</h1></div>
+            <div style="width: 155px; height: 126px"><h1>155</h1></div>
+            <div style="width: 247px; height: 126px"><h1>247</h1></div>
+            <div style="width: 98px; height: 126px"><h1>98</h1></div>
+            <div style="width: 192px; height: 126px"><h1>192</h1></div>
+        </div>
+        <h1 class="title">Adaptive Height</h1>
+        <div class="slider adaptive-height" role="toolbar">
+            <div><h1>1<p>+</p></h1></div>
+            <div><h1>2<p>+</p><p>+</p></h1></div>
+            <div><h1>3<p>+</p><p>+</p><p>+</p></h1></div>
+            <div><h1>4</h1></div>
+        </div>
+        <h1 class="title">Center Mode</h1>
+        <style>
+            .center .slick-center h1 {
+                -moz-transform: scale(1.08);
+                -ms-transform: scale(1.08);
+                -o-transform: scale(1.08);
+                -webkit-transform: scale(1.08);
+                color: #e67e22;
+                opacity: 1;
+                transform: scale(1.08);
+            }
+
+            .center h1 {
+                opacity: 0.8;
+                transition: all 300ms ease;
+            }
+        </style>
+        <div class="slider center" role="toolbar">
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+            <div><h1>5</h1></div>
+            <div><h1>6</h1></div>
+            <div><h1>7</h1></div>
+            <div><h1>8</h1></div>
+            <div><h1>9</h1></div>
+            <div><h1>10</h1></div>
+        </div>
+        
+        <h1 class="title">Lazy Loading</h1>
+        <div class="slider lazy" role="toolbar">
+            <div><img data-lazy="Content/Images/Aatrox.png" /></div>
+            <div><img data-lazy="Content/Images/Ahri.png" /></div>
+            <div><img data-lazy="Content/Images/Akali.png" /></div>
+            <div><img data-lazy="Content/Images/alistar.png" /></div>
+            <div><img data-lazy="Content/Images/amumu.png" /></div>
+            <div><img data-lazy="Content/Images/Anivia.png" /></div>
+            <div><img data-lazy="Content/Images/Annie.png" /></div>
+        </div>
+        
+        <h1 class="title">Autoplay</h1>
+        <div class="slider autoplay" role="toolbar">
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+            <div><h1>5</h1></div>
+            <div><h1>6</h1></div>
+            <div><h1>7</h1></div>
+            <div><h1>8</h1></div>
+            <div><h1>9</h1></div>
+            <div><h1>10</h1></div>
+        </div>
+        
+        <h1 class="title">Fade</h1>
+        <div class="slider fade" role="toolbar">
+            <div><img src="Content/Images/Aatrox.png" /></div>
+            <div><img src="Content/Images/Ahri.png" /></div>
+            <div><img src="Content/Images/Akali.png" /></div>
+            <div><img src="Content/Images/alistar.png" /></div>
+            <div><img src="Content/Images/amumu.png" /></div>
+            <div><img src="Content/Images/Anivia.png" /></div>
+            <div><img src="Content/Images/Annie.png" /></div>
+        </div>
+        
+        <h1 class="title">Add & Remove</h1>
+        <div class="slider add-remove" role="toolbar">
+            <div><h1>1</h1></div>
+        </div>
+        <div class="buttons">
+            <a href="javascript:void(0)" class="button js-add-slide">Add Slide</a>
+            <a href="javascript:void(0)" class="button js-remove-slide">Remove Slide</a>
+        </div>
+    </body>
+</html>

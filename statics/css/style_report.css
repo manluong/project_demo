@@ -1,0 +1,208 @@
+
+.table_content{
+	float: left;
+}
+.table_report{
+	float: left;
+	margin: 50px 0;
+	margin-top: 20px;	
+}
+.table_content .table_thongke{
+	float: left;	
+	margin-top: 20px;	
+	border: 0;	
+}
+.table_content .table_audit{
+	float: left;	
+	margin-top: 20px;
+	margin-left: 50px;
+	border: 0;	
+}
+.table_content .table_audit td{
+	border: 0;
+}
+.table_content .clear_left{
+	clear: both;
+}
+.table_content .table_thongke td, .table_content .table_thongke_chitiet td{
+	border: 0;
+}
+.table_content .table_thongke_chitiet{		
+	margin: 15px 0;	
+	border: 0;
+}
+.table_content .table_thongke_chitiet span, .table_content .table_thongke span{
+	text-align: right;
+}
+.table_content .table_thongke_chitiet .text_bold span, .table_content .table_thongke .text_bold span{
+	text-align: left;
+}
+.table_content .text_bold{
+	font-weight: bold;
+}
+.table_content table, .table_content table td{
+	border: 1px solid #000;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table_content table td{
+	text-align:center;
+	vertical-align: middle;
+	padding: 5px 10px;
+	min-width: 75px;
+}
+.table_content span{
+	width: 100%;		
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+.table_content span.table_head{
+	width: 100%;
+}
+.table_report td.colum_white{
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.bg_green{
+	background-color: #006411;
+	color: #fff;
+	font-weight: bold;
+}
+.bg_gray{
+	background-color: #ebf1de;
+	color: #000;
+	font-weight: bold;
+}
+
+.bg_cyan{
+	background-color: #00ccff;	
+	color: #fff;
+	font-weight: bold;
+}
+.bg_cyan2{
+	background-color: #00abea;		
+	font-weight: bold;
+}
+.bg_white{
+	background-color: #fff;	
+	font-weight: bold;
+}
+.bg_yellow{
+	background-color: #ffff00;	
+	font-weight: bold;
+}
+.bg_light_yellow{
+	background-color: #ffff99;	
+	font-weight: bold;
+}
+.bg_light_yellow2{
+	background-color: #ffffcc;	
+}
+
+.bg_orange{
+	background-color: #ffcc99;	
+	font-weight: bold;
+}
+.bg_pink{
+	background-color: #ff8080;	
+	font-weight: bold;
+}
+.bg_light_green{
+	background-color: #1fb714;	
+	font-weight: bold;
+}
+.bg_light_green2{
+	background-color: #00b050;	
+	font-weight: bold;
+}
+.bg_light_cyan{
+	background-color: #99ccff;
+	font-weight: bold;
+}
+.bg_red{
+	background-color: #dd0806;	
+	font-weight: bold;
+}
+
+
+
+
+
+/* Total report data*/
+.total_table_report{
+	float: left;
+	margin: 50px 50px;	
+	width: 1000px;		
+}
+.total_table_report td.colum_white2{
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+.total_table_report td.colum_white3{
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+.total_table_report .table_head_2{
+	color: #fff;
+}
+
+.export_file_btn {
+	display:block;
+	float:left;
+	height: 12px;
+	line-height:12px;
+	padding: 6px 10px;
+	border: 1px solid #d5d5d5;
+	text-decoration:none !important;
+	cursor:pointer;
+}
+.export_file_btn:hover{
+	background-color: #EDEDED;
+}
+.report_container{
+	float: left;
+	width: 100%;
+}
+.report_content{
+	width: 750px;
+	height: 40px;
+	padding-top: 15px;
+	border: 1px solid #D5D5D5;
+	float: left;
+	padding-left: 10px;
+	margin-left: 15px;
+	position: relative;
+	margin-top: 50px;
+}
+.report_title{
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	font-weight: bold;	
+	
+}
+
+.msg-success {
+    float: left;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.msg-fail {
+    float: left;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}

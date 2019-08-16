@@ -1,0 +1,18 @@
+.pagination{
+	text-align:right;
+	margin-top: 10px;
+}
+.pagination a, strong{
+	margin-left:10px;
+}
+.pagination strong{
+	color: #f19b01;
+	font-weight: bold;
+}
+.pagination .active a{
+	color: #f19b01 !important;
+	font-weight: bold !important;
+}
+.pagination>li {
+    display: inline;
+}
